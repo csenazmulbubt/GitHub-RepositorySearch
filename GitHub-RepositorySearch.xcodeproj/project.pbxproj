@@ -14,6 +14,9 @@
 		001FE94729C21AC9005714A2 /* GitHub_RepositorySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001FE94629C21AC9005714A2 /* GitHub_RepositorySearchTests.swift */; };
 		001FE95129C21AC9005714A2 /* GitHub_RepositorySearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001FE95029C21AC9005714A2 /* GitHub_RepositorySearchUITests.swift */; };
 		001FE95329C21AC9005714A2 /* GitHub_RepositorySearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001FE95229C21AC9005714A2 /* GitHub_RepositorySearchUITestsLaunchTests.swift */; };
+		001FE96729C2367C005714A2 /* SearchRepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001FE96629C2367C005714A2 /* SearchRepositoriesResponse.swift */; };
+		001FE96929C237FC005714A2 /* SearchRepositoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001FE96829C237FC005714A2 /* SearchRepositoriesItem.swift */; };
+		001FE96B29C23978005714A2 /* SearchRepositoriesOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001FE96A29C23978005714A2 /* SearchRepositoriesOwner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		001FE94C29C21AC9005714A2 /* GitHub-RepositorySearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GitHub-RepositorySearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		001FE95029C21AC9005714A2 /* GitHub_RepositorySearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub_RepositorySearchUITests.swift; sourceTree = "<group>"; };
 		001FE95229C21AC9005714A2 /* GitHub_RepositorySearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub_RepositorySearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		001FE96629C2367C005714A2 /* SearchRepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesResponse.swift; sourceTree = "<group>"; };
+		001FE96829C237FC005714A2 /* SearchRepositoriesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesItem.swift; sourceTree = "<group>"; };
+		001FE96A29C23978005714A2 /* SearchRepositoriesOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesOwner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,9 @@
 		001FE95F29C21CA7005714A2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				001FE96629C2367C005714A2 /* SearchRepositoriesResponse.swift */,
+				001FE96829C237FC005714A2 /* SearchRepositoriesItem.swift */,
+				001FE96A29C23978005714A2 /* SearchRepositoriesOwner.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 		001FE96129C21CC8005714A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				001FE96429C221D1005714A2 /* RepositorySearch */,
 				001FE93729C21AC6005714A2 /* ContentView.swift */,
 			);
 			path = Views;
@@ -156,6 +166,7 @@
 		001FE96229C21CF7005714A2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				001FE96529C2222C005714A2 /* Networking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,6 +176,20 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		001FE96429C221D1005714A2 /* RepositorySearch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositorySearch;
+			sourceTree = "<group>";
+		};
+		001FE96529C2222C005714A2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +322,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001FE96B29C23978005714A2 /* SearchRepositoriesOwner.swift in Sources */,
+				001FE96929C237FC005714A2 /* SearchRepositoriesItem.swift in Sources */,
+				001FE96729C2367C005714A2 /* SearchRepositoriesResponse.swift in Sources */,
 				001FE93829C21AC6005714A2 /* ContentView.swift in Sources */,
 				001FE93629C21AC6005714A2 /* GitHub_RepositorySearchApp.swift in Sources */,
 			);
