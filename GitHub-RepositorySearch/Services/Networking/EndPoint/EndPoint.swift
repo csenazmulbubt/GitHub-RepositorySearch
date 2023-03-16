@@ -7,6 +7,8 @@
 
 import Foundation
 
+//MARK: - Endpoint
+/// Github Repositories Search Request EndPoint URL Design
 
 struct EndPoint {
     var path: String
