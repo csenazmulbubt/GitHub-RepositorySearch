@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct GitHub_RepositorySearchApp: App {
+    let viewModel = RepositoriesSearchViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RepositoriesSearchView(viewModel: viewModel)
         }
     }
 }

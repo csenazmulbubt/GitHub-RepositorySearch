@@ -27,7 +27,8 @@ struct NetworkService: NetworkServiceProtocol {
     
     func fetchData<T>(type: T.Type, url: URL) -> AnyPublisher<T, NetworkRequestError> where T : Decodable {
         
-        let urlRequest = URLRequest(url: url)
+        var urlRequest = URLRequest(url: url)
+        urlRequest.timeoutInterval = 30
         
         guard NetworkManager.isNetworkAvailable else {
             return Fail(error: NetworkRequestError.noIntenet)

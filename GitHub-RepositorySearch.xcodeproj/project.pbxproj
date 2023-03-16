@@ -25,6 +25,10 @@
 		0026F51429C35EFA00A6E3C2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51329C35EFA00A6E3C2 /* NetworkManager.swift */; };
 		0026F51629C35F0C00A6E3C2 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51529C35F0C00A6E3C2 /* NetworkMonitor.swift */; };
 		0026F51929C3656400A6E3C2 /* RepositoresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51829C3656400A6E3C2 /* RepositoresService.swift */; };
+		0026F51C29C37F5500A6E3C2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51B29C37F5500A6E3C2 /* MessageView.swift */; };
+		0026F51E29C37FA400A6E3C2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51D29C37FA400A6E3C2 /* LoadingView.swift */; };
+		0026F52129C3804600A6E3C2 /* RepositoriesSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F52029C3804600A6E3C2 /* RepositoriesSearchView.swift */; };
+		0026F52329C384E400A6E3C2 /* RepositoriesSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F52229C384E400A6E3C2 /* RepositoriesSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		0026F51329C35EFA00A6E3C2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0026F51529C35F0C00A6E3C2 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		0026F51829C3656400A6E3C2 /* RepositoresService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoresService.swift; sourceTree = "<group>"; };
+		0026F51B29C37F5500A6E3C2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		0026F51D29C37FA400A6E3C2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0026F52029C3804600A6E3C2 /* RepositoriesSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesSearchView.swift; sourceTree = "<group>"; };
+		0026F52229C384E400A6E3C2 /* RepositoriesSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +182,8 @@
 		001FE96129C21CC8005714A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				001FE96429C221D1005714A2 /* RepositorySearch */,
+				0026F51A29C37F3100A6E3C2 /* CommonView */,
+				001FE96429C221D1005714A2 /* RepositoriesSearchView */,
 				001FE93729C21AC6005714A2 /* ContentView.swift */,
 			);
 			path = Views;
@@ -197,11 +206,12 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		001FE96429C221D1005714A2 /* RepositorySearch */ = {
+		001FE96429C221D1005714A2 /* RepositoriesSearchView */ = {
 			isa = PBXGroup;
 			children = (
+				0026F52029C3804600A6E3C2 /* RepositoriesSearchView.swift */,
 			);
-			path = RepositorySearch;
+			path = RepositoriesSearchView;
 			sourceTree = "<group>";
 		};
 		001FE96529C2222C005714A2 /* Networking */ = {
@@ -244,6 +254,7 @@
 		0026F50F29C342C900A6E3C2 /* RepositoriesSearchViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0026F52229C384E400A6E3C2 /* RepositoriesSearchViewModel.swift */,
 			);
 			path = RepositoriesSearchViewModel;
 			sourceTree = "<group>";
@@ -254,6 +265,15 @@
 				0026F51829C3656400A6E3C2 /* RepositoresService.swift */,
 			);
 			path = RepositoriesService;
+			sourceTree = "<group>";
+		};
+		0026F51A29C37F3100A6E3C2 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				0026F51B29C37F5500A6E3C2 /* MessageView.swift */,
+				0026F51D29C37FA400A6E3C2 /* LoadingView.swift */,
+			);
+			path = CommonView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,7 +406,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0026F52129C3804600A6E3C2 /* RepositoriesSearchView.swift in Sources */,
 				0026F51129C343E300A6E3C2 /* NetworkService.swift in Sources */,
+				0026F52329C384E400A6E3C2 /* RepositoriesSearchViewModel.swift in Sources */,
 				0026F51629C35F0C00A6E3C2 /* NetworkMonitor.swift in Sources */,
 				001FE96B29C23978005714A2 /* SearchRepositoriesOwner.swift in Sources */,
 				001FE97029C2596F005714A2 /* NetworkRequestError.swift in Sources */,
@@ -394,10 +416,12 @@
 				0026F51429C35EFA00A6E3C2 /* NetworkManager.swift in Sources */,
 				0026F50E29C3423C00A6E3C2 /* CurrentResponseState.swift in Sources */,
 				001FE96929C237FC005714A2 /* SearchRepositoriesItem.swift in Sources */,
+				0026F51E29C37FA400A6E3C2 /* LoadingView.swift in Sources */,
 				001FE96E29C2586E005714A2 /* HTTPMethod.swift in Sources */,
 				001FE96729C2367C005714A2 /* SearchRepositoriesResponse.swift in Sources */,
 				001FE93829C21AC6005714A2 /* ContentView.swift in Sources */,
 				0026F51929C3656400A6E3C2 /* RepositoresService.swift in Sources */,
+				0026F51C29C37F5500A6E3C2 /* MessageView.swift in Sources */,
 				001FE93629C21AC6005714A2 /* GitHub_RepositorySearchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,7 +583,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHub-RepositorySearch/Preview Content\"";
-				DEVELOPMENT_TEAM = Y3VRYY266M;
+				DEVELOPMENT_TEAM = GDHMVG3F84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -588,7 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHub-RepositorySearch/Preview Content\"";
-				DEVELOPMENT_TEAM = Y3VRYY266M;
+				DEVELOPMENT_TEAM = GDHMVG3F84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
