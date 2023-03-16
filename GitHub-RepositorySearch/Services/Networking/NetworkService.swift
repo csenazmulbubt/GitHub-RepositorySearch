@@ -18,6 +18,13 @@ protocol NetworkServiceProtocol {
 
 struct NetworkService: NetworkServiceProtocol {
     
+    /**
+     Default implementation of the NetworkService fetchData(_:) method.
+     Performs an APIRequest and tries to decode the response as a Decodable Response.
+     - Parameter request: GenericsType and Url
+     - Returns: A Publisher transmitting a Decodable Response defined by the HTTP URl Resoponse.
+     */
+    
     func fetchData<T>(type: T.Type, url: URL) -> AnyPublisher<T, NetworkRequestError> where T : Decodable {
         
         let urlRequest = URLRequest(url: url)
