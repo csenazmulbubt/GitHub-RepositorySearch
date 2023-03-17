@@ -24,7 +24,7 @@
 		0026F51129C343E300A6E3C2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51029C343E300A6E3C2 /* NetworkService.swift */; };
 		0026F51429C35EFA00A6E3C2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51329C35EFA00A6E3C2 /* NetworkManager.swift */; };
 		0026F51629C35F0C00A6E3C2 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51529C35F0C00A6E3C2 /* NetworkMonitor.swift */; };
-		0026F51929C3656400A6E3C2 /* RepositoresService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51829C3656400A6E3C2 /* RepositoresService.swift */; };
+		0026F51929C3656400A6E3C2 /* RepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51829C3656400A6E3C2 /* RepositoriesService.swift */; };
 		0026F51C29C37F5500A6E3C2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51B29C37F5500A6E3C2 /* MessageView.swift */; };
 		0026F51E29C37FA400A6E3C2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51D29C37FA400A6E3C2 /* LoadingView.swift */; };
 		0026F52129C3804600A6E3C2 /* RepositoriesSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F52029C3804600A6E3C2 /* RepositoriesSearchView.swift */; };
@@ -75,7 +75,7 @@
 		0026F51029C343E300A6E3C2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0026F51329C35EFA00A6E3C2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0026F51529C35F0C00A6E3C2 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
-		0026F51829C3656400A6E3C2 /* RepositoresService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoresService.swift; sourceTree = "<group>"; };
+		0026F51829C3656400A6E3C2 /* RepositoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesService.swift; sourceTree = "<group>"; };
 		0026F51B29C37F5500A6E3C2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		0026F51D29C37FA400A6E3C2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0026F52029C3804600A6E3C2 /* RepositoriesSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesSearchView.swift; sourceTree = "<group>"; };
@@ -279,7 +279,7 @@
 		0026F51729C3647A00A6E3C2 /* RepositoriesService */ = {
 			isa = PBXGroup;
 			children = (
-				0026F51829C3656400A6E3C2 /* RepositoresService.swift */,
+				0026F51829C3656400A6E3C2 /* RepositoriesService.swift */,
 			);
 			path = RepositoriesService;
 			sourceTree = "<group>";
@@ -467,7 +467,7 @@
 				001FE96729C2367C005714A2 /* SearchRepositoriesResponse.swift in Sources */,
 				00EAB0D229C4B657001F54A6 /* RepositoriesListViewModel.swift in Sources */,
 				001FE93829C21AC6005714A2 /* ContentView.swift in Sources */,
-				0026F51929C3656400A6E3C2 /* RepositoresService.swift in Sources */,
+				0026F51929C3656400A6E3C2 /* RepositoriesService.swift in Sources */,
 				0026F51C29C37F5500A6E3C2 /* MessageView.swift in Sources */,
 				00EAB0CF29C4B579001F54A6 /* RepositoriesListView.swift in Sources */,
 				001FE93629C21AC6005714A2 /* GitHub_RepositorySearchApp.swift in Sources */,

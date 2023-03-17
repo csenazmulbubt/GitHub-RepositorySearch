@@ -43,5 +43,4 @@ private struct RepositoriesContentView: View {
 private extension String {
     static let repositories = "Repositories"
     static let search = "Search repository"
-    static let loadingNext = "Loading..."
 }

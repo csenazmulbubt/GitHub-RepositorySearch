@@ -73,6 +73,7 @@ private struct PageLoadingRow: View {
                 .scaleEffect(1.0, anchor: .center)
                 .progressViewStyle(CircularProgressViewStyle(tint: .red))
                 .onAppear {
+                    // When scrolled all the way down - request the next page fetch
                     viewModel.page += 1
                 }
             Spacer()
