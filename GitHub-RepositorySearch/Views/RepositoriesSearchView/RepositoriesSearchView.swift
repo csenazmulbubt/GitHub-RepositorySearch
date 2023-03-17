@@ -24,11 +24,11 @@ struct RepositoriesSearchView: View {
 //MARK: - RepositoriesContentView
 private struct RepositoriesContentView: View {
     @ObservedObject var viewModel: RepositoriesSearchViewModel
-
+    
     var body: some View {
         switch viewModel.state {
         case let .display(items, hasNextPage):
-            MessageView(message: "", color: .gray)
+            RepositoriesListView(repoSearchViewModel: viewModel, repoListItems: items, hasNextPage: hasNextPage)
         case let .empty(message):
             MessageView(message: message, color: .gray)
         case let .error(message):

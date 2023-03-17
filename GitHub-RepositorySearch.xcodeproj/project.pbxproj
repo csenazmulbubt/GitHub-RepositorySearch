@@ -32,6 +32,8 @@
 		0026F52529C3965E00A6E3C2 /* Publisher + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F52429C3965E00A6E3C2 /* Publisher + Extension.swift */; };
 		00EAB0C929C4A6D5001F54A6 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB0C829C4A6D5001F54A6 /* ImageCache.swift */; };
 		00EAB0CC29C4A759001F54A6 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB0CB29C4A759001F54A6 /* ImageLoader.swift */; };
+		00EAB0CF29C4B579001F54A6 /* RepositoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB0CE29C4B579001F54A6 /* RepositoriesListView.swift */; };
+		00EAB0D229C4B657001F54A6 /* RepositoriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB0D129C4B657001F54A6 /* RepositoriesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		0026F52429C3965E00A6E3C2 /* Publisher + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher + Extension.swift"; sourceTree = "<group>"; };
 		00EAB0C829C4A6D5001F54A6 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		00EAB0CB29C4A759001F54A6 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		00EAB0CE29C4B579001F54A6 /* RepositoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListView.swift; sourceTree = "<group>"; };
+		00EAB0D129C4B657001F54A6 /* RepositoriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 		001FE96029C21CB3005714A2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				00EAB0D029C4B633001F54A6 /* RepositoriesListViewModel */,
 				0026F50F29C342C900A6E3C2 /* RepositoriesSearchViewModel */,
 			);
 			path = ViewModels;
@@ -188,6 +193,7 @@
 		001FE96129C21CC8005714A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				00EAB0CD29C4B554001F54A6 /* RepositoriesListView */,
 				0026F51A29C37F3100A6E3C2 /* CommonView */,
 				001FE96429C221D1005714A2 /* RepositoriesSearchView */,
 				001FE93729C21AC6005714A2 /* ContentView.swift */,
@@ -291,6 +297,22 @@
 				00EAB0CB29C4A759001F54A6 /* ImageLoader.swift */,
 			);
 			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		00EAB0CD29C4B554001F54A6 /* RepositoriesListView */ = {
+			isa = PBXGroup;
+			children = (
+				00EAB0CE29C4B579001F54A6 /* RepositoriesListView.swift */,
+			);
+			path = RepositoriesListView;
+			sourceTree = "<group>";
+		};
+		00EAB0D029C4B633001F54A6 /* RepositoriesListViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00EAB0D129C4B657001F54A6 /* RepositoriesListViewModel.swift */,
+			);
+			path = RepositoriesListViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,9 +461,11 @@
 				0026F51E29C37FA400A6E3C2 /* LoadingView.swift in Sources */,
 				001FE96E29C2586E005714A2 /* HTTPMethod.swift in Sources */,
 				001FE96729C2367C005714A2 /* SearchRepositoriesResponse.swift in Sources */,
+				00EAB0D229C4B657001F54A6 /* RepositoriesListViewModel.swift in Sources */,
 				001FE93829C21AC6005714A2 /* ContentView.swift in Sources */,
 				0026F51929C3656400A6E3C2 /* RepositoresService.swift in Sources */,
 				0026F51C29C37F5500A6E3C2 /* MessageView.swift in Sources */,
+				00EAB0CF29C4B579001F54A6 /* RepositoriesListView.swift in Sources */,
 				001FE93629C21AC6005714A2 /* GitHub_RepositorySearchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

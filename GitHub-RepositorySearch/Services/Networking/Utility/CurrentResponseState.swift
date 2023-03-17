@@ -9,7 +9,7 @@ import Foundation
 
 //Current Response State Enum When Fetching Data
 enum ResponseState {
-    case display(items: [SearchRepositoriesItem], _ hasNexPage: Bool)
+    case display(items: [RepositoriesListViewModel], hasNextPage: Bool)
     case empty(message: String)
     case loading
     case error(message: String)
