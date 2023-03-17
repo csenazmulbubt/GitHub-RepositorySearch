@@ -18,7 +18,9 @@ struct RepositoriesListView: View {
     var body: some View {
         List {
             ForEach(repoListItems) { item in
-                RepositoriesListContentView(repoListViewModel: item)
+                NavigationLink(destination: DetailView(repoListViewModel: item)) {
+                    RepositoriesListContentView(repoListViewModel: item)
+                }
             }
             if hasNextPage {
                 PageLoadingRow(viewModel: repoSearchViewModel)
