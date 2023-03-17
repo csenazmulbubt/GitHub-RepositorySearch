@@ -75,9 +75,7 @@ class RepositoriesSearchViewModel: ObservableObject {
                     return items.isEmpty
                     ? .empty(message: .noRepositories)
                     : .display(items: items, hasNextPage: response.totalCount > oldItems.count)
-                }
-                else{
-                    
+                }else{
                     return newItems.isEmpty
                     ? .empty(message: .noRepositories)
                     : .display(items: newItems, hasNextPage: response.totalCount > newItems.count)

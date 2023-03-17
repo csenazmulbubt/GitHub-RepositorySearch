@@ -56,7 +56,7 @@ class RepositoriesListViewModel: Identifiable, ObservableObject {
         cancellable = ImageLoader.shared.loadImage(from: url)
             .sink(receiveValue: { [weak self](image) in
                 if let image = image {
-                    self?.avatar = image
+                    self?.avatar = image.resizeImage(img: image)
                 }
             })
     }
