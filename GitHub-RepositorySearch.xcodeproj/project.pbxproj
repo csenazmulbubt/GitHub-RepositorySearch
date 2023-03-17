@@ -29,6 +29,7 @@
 		0026F51E29C37FA400A6E3C2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F51D29C37FA400A6E3C2 /* LoadingView.swift */; };
 		0026F52129C3804600A6E3C2 /* RepositoriesSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F52029C3804600A6E3C2 /* RepositoriesSearchView.swift */; };
 		0026F52329C384E400A6E3C2 /* RepositoriesSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F52229C384E400A6E3C2 /* RepositoriesSearchViewModel.swift */; };
+		0026F52529C3965E00A6E3C2 /* Publisher + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026F52429C3965E00A6E3C2 /* Publisher + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		0026F51D29C37FA400A6E3C2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0026F52029C3804600A6E3C2 /* RepositoriesSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesSearchView.swift; sourceTree = "<group>"; };
 		0026F52229C384E400A6E3C2 /* RepositoriesSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesSearchViewModel.swift; sourceTree = "<group>"; };
+		0026F52429C3965E00A6E3C2 /* Publisher + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 		0026F50C29C31F5800A6E3C2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0026F52429C3965E00A6E3C2 /* Publisher + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				001FE97029C2596F005714A2 /* NetworkRequestError.swift in Sources */,
 				0026F50B29C3125900A6E3C2 /* EndPoint.swift in Sources */,
 				0026F51429C35EFA00A6E3C2 /* NetworkManager.swift in Sources */,
+				0026F52529C3965E00A6E3C2 /* Publisher + Extension.swift in Sources */,
 				0026F50E29C3423C00A6E3C2 /* CurrentResponseState.swift in Sources */,
 				001FE96929C237FC005714A2 /* SearchRepositoriesItem.swift in Sources */,
 				0026F51E29C37FA400A6E3C2 /* LoadingView.swift in Sources */,

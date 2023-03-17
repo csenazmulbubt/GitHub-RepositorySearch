@@ -21,6 +21,7 @@ struct RepositoriesSearchView: View {
     }
 }
 
+//MARK: - RepositoriesContentView
 private struct RepositoriesContentView: View {
     @ObservedObject var viewModel: RepositoriesSearchViewModel
 

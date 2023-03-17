@@ -8,9 +8,8 @@
 import Foundation
 
 //Current Response State Enum When Fetching Data
-
 enum ResponseState {
-    case display(items: SearchRepositoriesResponse, _ hasNexPage: Bool)
+    case display(items: [SearchRepositoriesItem], _ hasNexPage: Bool)
     case empty(message: String)
     case loading
     case error(message: String)

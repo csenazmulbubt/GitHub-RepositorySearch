@@ -12,33 +12,12 @@ import Foundation
 /// A lot of atrriubte but at this moment don't need All
 /// https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#get-a-repository
 
-public struct SearchRepositoriesItem : Codable {
-    public let createdAt : String?
-    public let fullName : String?
-    public let id : Int?
-    public let language : String?
-    public let name : String?
-    public let owner : SearchRepositoriesOwner?
-    public let stargazersCount : Int?
-
-    enum CodingKeys: String, CodingKey {
-        case createdAt = "created_at"
-        case fullName = "full_name"
-        case id
-        case language
-        case name
-        case owner
-        case stargazersCount = "stargazers_count"
-    }
+public struct SearchRepositoriesItem : Codable,Identifiable {
+    public var id, stargazersCount: Int
+    public let name, fullName, language, createdAt: String?
+    public let owner: SearchRepositoriesOwner
     
-    public init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
-        fullName = try values.decodeIfPresent(String.self, forKey: .fullName)
-        id = try values.decodeIfPresent(Int.self, forKey: .id)
-        language = try values.decodeIfPresent(String.self, forKey: .language)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        owner = try values.decodeIfPresent(SearchRepositoriesOwner.self, forKey: .owner)
-        stargazersCount = try values.decodeIfPresent(Int.self, forKey: .stargazersCount)
+   public var starCount: String? {
+        String(stargazersCount)
     }
 }
