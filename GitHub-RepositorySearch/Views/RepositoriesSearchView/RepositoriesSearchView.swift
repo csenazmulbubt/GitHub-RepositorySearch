@@ -17,7 +17,14 @@ struct RepositoriesSearchView: View {
         NavigationView {
             RepositoriesContentView(viewModel: viewModel)
                 .navigationTitle(String.repositories)
+                .navigationViewStyle(StackNavigationViewStyle())
         }.searchable(text: $viewModel.searchText, prompt: String.search)
+            .onChange(of: viewModel.searchText) { _ in
+                if viewModel.searchText.isEmpty {
+                    //Logically This Statement not need I investigate this later
+                    viewModel.state = .empty(message: "Search Repositories")
+                }
+            }
     }
 }
 
