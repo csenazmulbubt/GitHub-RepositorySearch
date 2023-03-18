@@ -16,7 +16,7 @@ class RepositoriesListViewModel: Identifiable, ObservableObject {
     @Published public var avatar = UIImage()
     
     private let repoItem: SearchRepositoriesItem
-    private var cancellable: AnyCancellable?
+    private var cancellables = Set<AnyCancellable>()
     
     public init(repoItem: SearchRepositoriesItem) {
         self.repoItem = repoItem
@@ -30,6 +30,7 @@ class RepositoriesListViewModel: Identifiable, ObservableObject {
     public var htmlUrl: URL {
         repoItem.htmlUrl
     }
+    
     public var creationTime: String {
         guard let strDate = repoItem.createdAt,
               let date = RepositoriesListViewModel.dateFormatterServer
@@ -53,15 +54,15 @@ class RepositoriesListViewModel: Identifiable, ObservableObject {
         repoItem.language ?? "NA"
     }
     
-    private func loadAvatarImage(){
+    private func loadAvatarImage() {
         guard let strUrl = repoItem.owner.avatarUrl,
               let url = URL(string: strUrl) else { return }
-        cancellable = ImageLoader.shared.loadImage(from: url)
+         ImageLoader.shared.loadImage(from: url)
             .sink(receiveValue: { [weak self](image) in
                 if let image = image {
                     self?.avatar = image.resizeImage(img: image)
                 }
-            })
+            }).store(in: &cancellables)
     }
 }
 
