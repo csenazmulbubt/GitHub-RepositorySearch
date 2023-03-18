@@ -27,6 +27,9 @@ class RepositoriesListViewModel: Identifiable, ObservableObject {
         repoItem.owner.login
     }
     
+    public var htmlUrl: URL {
+        repoItem.htmlUrl
+    }
     public var creationTime: String {
         guard let strDate = repoItem.createdAt,
               let date = RepositoriesListViewModel.dateFormatterServer
@@ -43,7 +46,7 @@ class RepositoriesListViewModel: Identifiable, ObservableObject {
     }
     
     public var star: String {
-        repoItem.starCount ?? "NA"
+        "\(repoItem.stargazersCount)"
     }
     
     public var language: String {

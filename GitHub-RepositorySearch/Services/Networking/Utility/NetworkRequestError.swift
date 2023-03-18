@@ -38,7 +38,7 @@ struct NetworkServiceError {
         case 304:
             return NetworkRequestError.errorMesage("Not Modified")
         case 403:
-            return NetworkRequestError.errorMesage("API rate limit exceeded")
+            return NetworkRequestError.errorMesage("API rate limit exceeded try again 30-60 seconds later")
         case 422:
             return NetworkRequestError.errorMesage("Validation failed, or the endpoint has been spammed")
         case 503:

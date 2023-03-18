@@ -16,8 +16,6 @@ public struct SearchRepositoriesItem : Codable,Identifiable {
     public var id, stargazersCount: Int
     public let name, fullName, language, createdAt: String?
     public let owner: SearchRepositoriesOwner
+    public let htmlUrl: URL
     
-   public var starCount: String? {
-        String(stargazersCount)
-    }
 }

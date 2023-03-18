@@ -51,6 +51,7 @@ struct ScrollContent: View {
                     TextView(label: "Craeted At : ", text: repoListViewModel.creationTime)
                     TextView(label: "Star Count: ", text: repoListViewModel.star)
                     TextView(label: "Language: ", text: repoListViewModel.language)
+                    ShowUrlView(url: repoListViewModel.htmlUrl)
                 }
                 .padding(.top, 20)
                 Spacer()
@@ -69,4 +70,25 @@ struct TextView: View {
             Text(text).italic()
         }
     }
+}
+
+struct ShowUrlView: View {
+    let url: URL
+    
+    var body: some View {
+        HStack {
+            Image(systemName: .chevronImageName)
+            Text(String.toBrowser)
+        }
+        .foregroundColor(.blue)
+        .onTapGesture {
+            UIApplication.shared.open(url)
+        }
+    }
+}
+
+// A private String extension just to keep "raw" strings out of the code
+private extension String {
+    static let toBrowser = "Open in Browser"
+    static let chevronImageName = "chevron.right"
 }
