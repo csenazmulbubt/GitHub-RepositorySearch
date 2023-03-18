@@ -138,12 +138,12 @@
 		001FE93429C21AC6005714A2 /* GitHub-RepositorySearch */ = {
 			isa = PBXGroup;
 			children = (
+				00F68D5529C62C15000DA063 /* App */,
 				001FE96129C21CC8005714A2 /* Views */,
 				001FE96029C21CB3005714A2 /* ViewModels */,
 				001FE95F29C21CA7005714A2 /* Models */,
 				001FE96329C21E1B005714A2 /* Helpers */,
 				001FE96229C21CF7005714A2 /* Services */,
-				001FE93529C21AC6005714A2 /* GitHub_RepositorySearchApp.swift */,
 				001FE93929C21AC8005714A2 /* Assets.xcassets */,
 				001FE93B29C21AC8005714A2 /* Preview Content */,
 			);
@@ -335,6 +335,14 @@
 				00F68D5229C60AE9000DA063 /* ApiCache.swift */,
 			);
 			path = ApiCache;
+			sourceTree = "<group>";
+		};
+		00F68D5529C62C15000DA063 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				001FE93529C21AC6005714A2 /* GitHub_RepositorySearchApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
