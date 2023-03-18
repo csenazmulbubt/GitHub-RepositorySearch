@@ -36,8 +36,26 @@ struct RepositoriesService:  RepositoriesServiceProtocol {
      - Returns: A Publisher transmitting the search results.
      */
     func searchRepositories(query: String, page: Int) -> AnyPublisher<SearchRepositoriesResponse, NetworkRequestError> {
-        let endpoint = EndPoint.searchRepositories(query: query, pageNo: page)
+        
+        let endpoint = EndPoint.searchRepositories(query: query, pageNo: page, httpMethod: .get)
+       
+        let key = "\(query)-\(page)"
+        
+        if !NetworkManager.isNetworkAvailable {
+            if let cachedResult = ApiCache.shared.getResponseData(key: key) as? SearchRepositoriesResponse {
+                return Just(cachedResult)
+                    .setFailureType(to: NetworkRequestError.self)
+                    .eraseToAnyPublisher()
+            }
+            else{
+                return Fail(error: NetworkRequestError.noIntenet)
+                    .eraseToAnyPublisher()
+            }
+        }
         return networkService
-            .fetchData(type: SearchRepositoriesResponse.self, url: endpoint.url)
+            .fetchData(type: SearchRepositoriesResponse.self, urlRequest: endpoint.urlRequest).handleEvents(receiveOutput: {  response in
+                ApiCache.shared.setResponseData(response as AnyObject, key: key)
+            })
+            .eraseToAnyPublisher()
     }
 }

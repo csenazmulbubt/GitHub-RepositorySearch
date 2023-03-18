@@ -20,8 +20,8 @@ struct RepositoriesSearchView: View {
                 .navigationViewStyle(StackNavigationViewStyle())
         }.searchable(text: $viewModel.searchText, prompt: String.search)
             .onChange(of: viewModel.searchText) { _ in
+                //When User Cancel searchbar forcely state change
                 if viewModel.searchText.isEmpty {
-                    //Logically This Statement not need I investigate this later
                     viewModel.state = .empty(message: "Search Repositories")
                 }
             }

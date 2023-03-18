@@ -11,7 +11,7 @@ import Combine
 //MARK: - NetworkServiceProtocol
 
 protocol NetworkServiceProtocol {
-    func fetchData<T: Decodable>(type: T.Type, url: URL) -> AnyPublisher<T, NetworkRequestError>
+    func fetchData<T: Decodable>(type: T.Type, urlRequest: URLRequest) -> AnyPublisher<T, NetworkRequestError>
 }
 
 // MARK: - NetworkService
@@ -25,15 +25,7 @@ struct NetworkService: NetworkServiceProtocol {
      - Returns: A Publisher transmitting a Decodable Response defined by the HTTP URl Resoponse.
      */
     
-    func fetchData<T>(type: T.Type, url: URL) -> AnyPublisher<T, NetworkRequestError> where T : Decodable {
-        
-        var urlRequest = URLRequest(url: url)
-        urlRequest.timeoutInterval = 30
-        
-        guard NetworkManager.isNetworkAvailable else {
-            return Fail(error: NetworkRequestError.noIntenet)
-                .eraseToAnyPublisher()
-        }
+    func fetchData<T>(type: T.Type, urlRequest: URLRequest) -> AnyPublisher<T, NetworkRequestError> where T : Decodable {
         
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase

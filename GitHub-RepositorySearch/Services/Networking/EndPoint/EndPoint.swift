@@ -13,6 +13,7 @@ import Foundation
 struct EndPoint {
     var path: String
     var queryItems: [URLQueryItem] = []
+    var httpMethod: HTTPMethod = .get
     
     var url: URL {
         var components = URLComponents()
@@ -27,11 +28,18 @@ struct EndPoint {
         return url
     }
     
-    static func searchRepositories(query: String, pageNo: Int) -> Self {
+    var urlRequest: URLRequest {
+        var urlRequest = URLRequest(url: url)
+        urlRequest.timeoutInterval = 20
+        urlRequest.httpMethod = httpMethod.rawValue
+        return urlRequest
+    }
+    
+    static func searchRepositories(query: String, pageNo: Int, httpMethod: HTTPMethod = .get) -> Self {
        
         // Searching Paramenter
         let items: [URLQueryItem] = [.init(name: "q", value: "\(query)"),.init(name: "page", value: "\(pageNo)")]
         
-        return EndPoint(path: "/repositories", queryItems: items)
+        return EndPoint(path: "/repositories", queryItems: items, httpMethod: httpMethod)
     }
 }

@@ -35,6 +35,7 @@
 		00EAB0D229C4B657001F54A6 /* RepositoriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB0D129C4B657001F54A6 /* RepositoriesListViewModel.swift */; };
 		00EAB0D629C4E012001F54A6 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB0D529C4E012001F54A6 /* UIImage + Extension.swift */; };
 		00EAB0D929C4E749001F54A6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAB0D829C4E749001F54A6 /* DetailView.swift */; };
+		00F68D5329C60AE9000DA063 /* ApiCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F68D5229C60AE9000DA063 /* ApiCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		00EAB0D129C4B657001F54A6 /* RepositoriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListViewModel.swift; sourceTree = "<group>"; };
 		00EAB0D529C4E012001F54A6 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 		00EAB0D829C4E749001F54A6 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		00F68D5229C60AE9000DA063 /* ApiCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 		001FE96229C21CF7005714A2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				00F68D5429C60D4E000DA063 /* ApiCache */,
 				0026F51729C3647A00A6E3C2 /* RepositoriesService */,
 				001FE96529C2222C005714A2 /* Networking */,
 			);
@@ -324,6 +327,14 @@
 				00EAB0D829C4E749001F54A6 /* DetailView.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		00F68D5429C60D4E000DA063 /* ApiCache */ = {
+			isa = PBXGroup;
+			children = (
+				00F68D5229C60AE9000DA063 /* ApiCache.swift */,
+			);
+			path = ApiCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,6 +471,7 @@
 				00EAB0D929C4E749001F54A6 /* DetailView.swift in Sources */,
 				0026F51129C343E300A6E3C2 /* NetworkService.swift in Sources */,
 				00EAB0CC29C4A759001F54A6 /* ImageLoader.swift in Sources */,
+				00F68D5329C60AE9000DA063 /* ApiCache.swift in Sources */,
 				0026F52329C384E400A6E3C2 /* RepositoriesSearchViewModel.swift in Sources */,
 				0026F51629C35F0C00A6E3C2 /* NetworkMonitor.swift in Sources */,
 				001FE96B29C23978005714A2 /* SearchRepositoriesOwner.swift in Sources */,
