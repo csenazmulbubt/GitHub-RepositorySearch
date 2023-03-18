@@ -22,7 +22,7 @@ struct RepositoriesSearchView: View {
             .onChange(of: viewModel.searchText) { _ in
                 //When User Cancel searchbar forcely state change
                 if viewModel.searchText.isEmpty {
-                    viewModel.state = .empty(message: "Search Repositories")
+                    viewModel.resetStateForcely()
                 }
             }
     }

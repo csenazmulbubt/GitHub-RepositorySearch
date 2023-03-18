@@ -41,7 +41,7 @@ class RepositoriesSearchViewModel: ObservableObject {
             .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
             .map { [unowned self] in (searchText: self.searchText, page: $0) }
         
-        // In both cases, search for repositories via the searchService by query and page
+        // In both cases, search for repositories via the repositoriesService by query and page
         Publishers.Merge(newSearch, nextPage)
             .removeDuplicates(by: { $0.searchText == $1.searchText && $0.page == $1.page })
             .flatMapLatest { [unowned self] searchText, page -> AnyPublisher<ResponseState, Never> in
@@ -50,9 +50,9 @@ class RepositoriesSearchViewModel: ObservableObject {
                 }
                 return self.fetchData(query: searchText, page: page)
             }
-            .sink(receiveValue: { [weak self] state in
+            .sink(receiveValue: { [weak self] responsState in
                 guard let self = self else { return  }
-                self.state = state
+                self.state = responsState
             })
             .store(in: &cancellables)
     }
@@ -85,6 +85,9 @@ class RepositoriesSearchViewModel: ObservableObject {
             .eraseToAnyPublisher()
     }
     
+    func resetStateForcely() -> Void {
+        state = .empty(message: .searchRepositories)
+    }
 }
 
 
