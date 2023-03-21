@@ -11,6 +11,7 @@ import UIKit.UIImage
 //MARK: - RepositoriesListView
 
 struct RepositoriesListView: View {
+   
     @ObservedObject var repoSearchViewModel: RepositoriesSearchViewModel
     let repoListItems: [RepositoriesListViewModel]
     let hasNextPage: Bool
@@ -32,6 +33,7 @@ struct RepositoriesListView: View {
 //MARK: - RepositoriesListContentView
 
 private struct RepositoriesListContentView: View {
+   
     @ObservedObject private var repoListViewModel: RepositoriesListViewModel
     private let screenWidth = UIScreen.main.bounds.width
     
@@ -50,6 +52,7 @@ private struct RepositoriesListContentView: View {
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color.blue, lineWidth: 1))
             VStack(alignment: .leading) {
+                Spacer(minLength: 8)
                 Text(repoListViewModel.fullName).bold()
                 Spacer(minLength: 4)
                 Text("Language:  \(repoListViewModel.language)")
@@ -57,6 +60,7 @@ private struct RepositoriesListContentView: View {
                     Text("Star: ")
                     Text(repoListViewModel.star).foregroundColor(.blue)
                 }
+                Spacer(minLength: 8)
             }
             Spacer()
         }
