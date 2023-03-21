@@ -33,7 +33,7 @@ GitHub-RepositorySearch is an example that using [Combine](https://developer.app
 
 ## Installation
 
-1. `https://github.com/csenazmulbubt/GitHub-RepositorySearch.git`
+1. git clone `https://github.com/csenazmulbubt/GitHub-RepositorySearch.git`
 2. Open `GitHub-RepositorySearch.xcodeproj`
 3. Build and Run app(`Cmd - R`)
 
