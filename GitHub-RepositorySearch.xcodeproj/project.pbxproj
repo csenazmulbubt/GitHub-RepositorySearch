@@ -144,7 +144,7 @@
 				001FE95F29C21CA7005714A2 /* Models */,
 				001FE96329C21E1B005714A2 /* Helpers */,
 				001FE96229C21CF7005714A2 /* Services */,
-				001FE93929C21AC8005714A2 /* Assets.xcassets */,
+				007517C429CA010900BF4AEA /* Resources */,
 				001FE93B29C21AC8005714A2 /* Preview Content */,
 			);
 			path = "GitHub-RepositorySearch";
@@ -294,6 +294,14 @@
 				0026F51D29C37FA400A6E3C2 /* LoadingView.swift */,
 			);
 			path = CommonView;
+			sourceTree = "<group>";
+		};
+		007517C429CA010900BF4AEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				001FE93929C21AC8005714A2 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		00EAB0C729C4A6B6001F54A6 /* ImageLoader */ = {
